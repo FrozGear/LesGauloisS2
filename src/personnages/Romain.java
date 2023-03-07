@@ -22,12 +22,14 @@ public class Romain {
 	}
 	
 	public void recevoirCoup(int forceCoup) {
+		assert forceCoup >= 0 : "La valeur rentree est negative";
 		force -= forceCoup;
 		if (force>0) {
 			parler("Aie !");
 		} else {
 			parler("J'abandonne ...");
 		}
+		assert forceCoup > force-forceCoup: "post-condition"; 
 	}
 	
 	public static void main(String [] args) {
