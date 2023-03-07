@@ -3,6 +3,8 @@ package personnages;
 public class Romain {
 	private String nom;
 	private int force;
+	private Equipement[] equipement;
+	private int nbEquipement=0;
 	
 	public Romain(String nom, int force) {
 		this.nom = nom;
@@ -32,9 +34,19 @@ public class Romain {
 		assert forceCoup > force-forceCoup: "post-condition"; 
 	}
 	
+	public void sEquiper(Equipement stuffs) {
+		switch (Equipement) {
+		case nbEquipement==2:
+			System.out.println("Le soldat"+ nom +"est deja bien protege !");
+		}
+	}
+	
 	public static void main(String [] args) {
 		Romain coronavirus = new Romain("Coronavirus", 6);
 		coronavirus.parler("Salut");
 		coronavirus.recevoirCoup(4);
+		
+		//System.out.println(Equipement.CASQUE);
+		//System.out.println(Equipement.BOUCLIER);
 	}
 }
