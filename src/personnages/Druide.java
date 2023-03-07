@@ -37,8 +37,12 @@ public class Druide {
 		}
 	}
 	
-	public void booste(Gaulois gaulois) {
-		gaulois.effetPotion = forcePotion;
+	public void booster(Gaulois gaulois) {
+		if (gaulois.getNom() == "Obelix") {
+			gaulois.boirePotion(0);
+			parler("Non Obelix !... Tu n’auras pas de potion magique !");
+		}
+		gaulois.boirePotion(forcePotion);
 	}
 	
 	public static void main(String[] args) {

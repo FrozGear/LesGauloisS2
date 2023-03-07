@@ -5,9 +5,10 @@ public class Gaulois {
 	private int force;
 	private int effetPotion = 1;
 	
-	public Gaulois(String nom, int force) {
+	public Gaulois(String nom, int force, int effetPotion) {
 		this.nom = nom;
 		this.force = force;
+		this.effetPotion = effetPotion;
 	}
 	
 	public String getNom() {
@@ -42,8 +43,9 @@ public class Gaulois {
 	}
 	
 	public static void main(String [] args) {
-		Gaulois asterix = new Gaulois("Asterix", 8);
+		Gaulois asterix = new Gaulois("Asterix", 8, 5);
 		asterix.parler("Salut");
-		asterix.boirePotion(effetPotion);
+		asterix.boirePotion(4);
 	}
+
 }
